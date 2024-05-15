@@ -1,0 +1,8 @@
+<%- include("partials/header.ejs") %>
+
+<h1><%= post.title %></h1>
+<p><%= post.content %></p>
+<a href="/edit/<%= post.id %>" class="read-more-link">Edit&nbsp;</a>
+<a href="/confirm-delete/<%= post.id %>" class="read-more-link">Delete</a>
+
+<%- include("partials/footer.ejs") %>

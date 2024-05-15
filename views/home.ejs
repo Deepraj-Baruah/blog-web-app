@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+    <h1>Welcome to our Blog!</h1>
+    <p><%= home %></p>
+        <% storage.forEach(function(post){%>
+                <h2>
+                    <%= post.title %>
+                </h2>
+                <p>
+                    <%= post.content %>
+                </p>
+                <!-- <a href="/post/ <%#= post.postTitle %>">Read more</a> -->
+                <a href="/post/<%= post.id %>" class="read-more-link">Read more</a>
+        <%}); %> 
+<%- include("partials/footer.ejs") %>

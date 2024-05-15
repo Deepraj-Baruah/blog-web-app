@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs") %>
+<form action="/update/<%= post.id %>" method="POST" class="form">
+  <label for="title">Title:</label>
+  <div>
+      <input type="text" name="posttitle" id="title" class="feedback-input" value="<%= post.title %>">
+  </div>
+  <label for="text">Write your Post:</label>
+  <div>
+      <textarea name="posttext" id="text" class="feedback-input"><%= post.content %></textarea>
+  </div>
+  <div>
+      <input type="submit" value="SAVE" class="submit-button">
+  </div>
+</form>
+<%- include("partials/footer.ejs") %>
